@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntuya KDE nasıl yüklenir? - Blog</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: #333;
+            line-height: 1.6;
+        }
+        footer {
+            position: relative;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 20px;
+        }
+        .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #66a6ff;
+    font-size: 2em;
+}
+
+.social-icons a:hover {
+    color: #1da1f2;
+}
+
+.social-icons i {
+    transition: transform 0.2s;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding-bottom: 50px; /* Space for copyright */
+        }
+        h1 {
+            font-size: 2em;
+            color: #444;
+            text-align: center;
+        }
+        .author {
+            text-align: center;
+            margin-top: -10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .code-block {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #66a6ff;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-family: monospace;
+            position: relative;
+        }
+        .copy-icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            color: #66a6ff;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #66a6ff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+
+        /* Copyright styling */
+        .copyright {
+            position: relative;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            padding-top: 20px;
+        }
+        a {
+    color: #5e72e4;
+    background-color: transparent
+}
+
+a,a:hover {
+    text-decoration: none
+}
+
+a:hover {
+    color: #233dd2
+}
+
+a:not([href]):not([tabindex]),a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none
+}
+
+a:not([href]):not([tabindex]):focus {
+    outline: 0
+}
+.social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #66a6ff;
+            font-size: 2em;
+        }
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
+        .social-icons i {
+            transition: transform 0.2s;
+        }
+        .social-icons a:hover i {
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ubuntuya KDE nasıl yüklenir</h1>
+        <p class="author">By <a href="/index.html">Akif</a></p>
+
+        <p>Gnomedan sıkılanlar için Popüler masaüstü ortamı olan KDE'nin Ubuntuya nasıl yükleneceğine dair bir rehber! 🥳</p>
+
+        <h2>Adım 1: Sistemi güncelleyin</h2>
+        <p>Bu komutu kullanarak sistemi güncelleyin(neden güncellemeniz gerektiğini anlatmıyorum bile):</p>
+        <div class="code-block">
+            <code>sudo apt update -y && sudo apt upgrade -y</code>
+            <span class="copy-icon" onclick="copyText('sudo apt update -y && sudo apt upgrade -y')"><i class="bi bi-copy"></i></span>
+        </div>
+
+        <h2>Adım 2: KDE Plasmayı indirmek</h2>
+        <p>Şimdi 3 tane seçenek var altına açıklamalarını yazdım zaten:</p>
+        <div class="code-block">
+            <code>sudo apt install kde-plasma-desktop</code>
+            <span class="copy-icon" onclick="copyText('sudo apt install kde-plasma-desktop')"><i class="bi bi-copy"></i></span>
+        </div>
+        <p>Sadece KDE'yi indirmek için yanında hiç bir uygulaması yok sadece Masaüstü ortamı</p>
+<div class="code-block">
+    <code>sudo apt install kde-standard
+    </code>
+            <span class="copy-icon" onclick="copyText('sudo apt install kde-standard')"><i class="bi bi-copy"></i></span>
+</div>
+<p>Bu normal temel uygulamalar falan var tavsiye edilenide bu zaten</p>
+<div class="code-block">
+    <code>sudo apt install kde-full
+    </code>
+            <span class="copy-icon" onclick="copyText('sudo apt install kde-full')"><i class="bi bi-copy"></i></span>
+</div>
+<p>Bu KDE nin 7 ceddini indirmek isteyenler için ben bunu indirceğim</p>
+        <h2>Step 3: SSDM ekranı</h2>
+        <p>Kurulum sırasında, “sddm'yi yapılandırma” başlıklı bir ekranla karşılaşacaksınız. KDE Plasma, Basit Masaüstü Ekran Yöneticisi (SDDM) ile en iyi şekilde çalışmak üzere tasarlanmıştır. Yapılandırmaya devam etmek için, seçeneği vurgulamak için TAB tuşuna basın <Ok>ve seçiminizi onaylamak için ENTER tuşuna basın. Ben örnek bir görsel koyucam buraya </p>
+<img src="gorsel1.png">
+        <h2>Son: Masaüstü seçme</h2>
+        <p>Her şey bittikten sonra görseldeki adımları uygulayın:</p>
+        <img src="gorsel2.png">
+        <p>Oturumu kapatın işte resim koydum</p>
+        <p>Ve sonrasında parola girme ekranında Plasmayı seçin</p>
+
+        <h2>VE BU KADAR artık KDE'nin tadını çıkarabilirsiniz 🐧</h2>
+
+        <div class="social-icons">
+            <a href="https://youtube.com/@VStudioAkif" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://github.com/akifbabapiro" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <!-- Copyright text at the bottom -->
+        <div class="copyright">
+2025, Akif
+        </div>
+    </div>
+
+    <div id="toast">Komut Panoya kopyalandı!</div>
+
+    <script>
+        function copyText(text) {
+            // Create a temporary text area to copy the text
+            var tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            // Show toast message
+            var toast = document.getElementById("toast");
+            toast.className = "show";
+            setTimeout(function() { toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+</html>

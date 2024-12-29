@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB SİTEM</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #000000, #333333);
+            color: white;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 2em;
+        }
+
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
+
+        .social-icons i {
+            transition: transform 0.2s;
+        }
+
+        .social-icons a:hover i {
+            transform: scale(1.2);
+        }
+
+        .highlight {
+            color: green;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            text-align: center;
+            font-size: 0.8em;
+            color: gray;
+            width: 100%;
+            z-index: 10; /* Copyright yazısını diğer öğelerin önüne getirir */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title"><span class="highlight">$~</span> Selam, Ben Akif</div>
+        <div class="social-icons">
+            <a href="https://youtube.com/@VStudioAkif" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://github.com/akifbabapiro" target="_blank" title="YouTube">
+                <i class="fab fa-github"></i>
+            </a>
+            <!-- <a href="https://twitter.com" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a> -->
+        </div>
+    </div>
+    <footer>
+        2025, Akif
+    </footer>
+</body>
+</html>
